@@ -577,6 +577,74 @@ hr{
         font-size: 36px;
     }
 }
+
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
+.menu-toggle{
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Fix navbar overlapping */
+
+header{
+    position: relative;
+    z-index: 1000;
+}
+
+/* Mobile Navigation Fix */
+
+@media(max-width:768px){
+
+    header ul{
+        position: absolute;
+        top: 90px;
+        right: 20px;
+
+        width: 220px;
+
+        background: #111;
+
+        border-radius: 15px;
+
+        padding: 20px;
+
+        display: none;
+        flex-direction: column;
+        gap: 18px;
+
+        z-index: 999;
+
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    header ul.active{
+        display: flex;
+    }
+
+    /* Push Hero Section Down */
+
+    #hero{
+        margin-top: 40px;
+    }
+
+    /* Image Spacing */
+
+    #hero img{
+        margin-top: 20px;
+    }
+
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
 /* =========================
    MOBILE RESPONSIVE DESIGN
 ========================= */
