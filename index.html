@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+   
+<header>
+
+    <h1>DATIPAMULA GOUTHAM</h1>
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <ul id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skill">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</header>
+<section id="hero">
+   <div class="hero-content">
+
+    <img src="linkedinheadshot.png" alt="linkedinheadshot"/>
+
+    <div class="hero-text">
+
+        <h1>Web Developer</h1>
+
+        <h2 class="typing-text">
+            Cybersecurity Enthusiast
+        </h2>
+
+        <p>
+            Hi, I’m Goutham Netha — a passionate web development student focused on creating clean, modern, and user-friendly websites.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="mailto:gouthamnetha.dg@gmail.com"
+            class="btn primary-btn">
+            Hire Me
+            </a>
+
+            <a href="resume.pdf"
+            class="btn secondary-btn"
+            download>
+            <i class="fas fa-download"></i>
+            Download Resume
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="about">
+    <hr />
+    <h3>About Me</h3>
+    <hr />
+    <img src="linkedinheadshot.png" alt="profile" height="200"/>
+    <p>I'm Goutham Netha ,a web  development student passionate about creating modern and responsive website.I am more interested in cyber works but before cracking the locks I want to learn creating one.</p>
+    <h5>Education:</h5>
+    <pre>Bachelor of Technology (B.Tech) in Computer Science Engineering 
+Avanthi Institutes of Engineering and Technology 
+4th Year | CGPA: 8.56 | Expected Graduation: 2027 </pre>
+    <h5>Goal:</h5>
+    <p> Web Developer | Cybersecurity Analyst</p>
+    <hr />
+
+</section>
+
+<section id="skill" class="skills-section">
+
+    <h2>My Skills</h2>
+
+    <div class="skill">
+
+        <div class="skill-info">
+            <span>HTML</span>
+            <span>90%</span>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-progress html"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <div class="skill-info">
+            <span>CSS</span>
+            <span>85%</span>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-progress css"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <div class="skill-info">
+            <span>JavaScript</span>
+            <span>75%</span>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-progress javascript"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <div class="skill-info">
+            <span>Python</span>
+            <span>80%</span>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-progress python"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <div class="skill-info">
+            <span>React</span>
+            <span>65%</span>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-progress react"></div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projects" class="projects-section">
+
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>Modern responsive personal portfolio website using HTML and CSS.</p>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Landing Page</h3>
+            <p>Creative landing page with animations and modern UI.</p>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Cybersecurity Blog</h3>
+            <p>Simple cybersecurity awareness and tips website project.</p>
+            <a href="#">View Project</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+    <hr/>
+    <h2>Contact Me</h2>
+    <hr/>
+   <form action="https://formsubmit.co/datipamulagoutham@gmail.com"
+      method="POST"
+      class="contact-form">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message"
+              placeholder="Your Message"
+              rows="5"
+              required></textarea>
+
+    <!-- Disable Captcha -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Thank You Page -->
+    <input type="hidden"
+           name="_next"
+           value="https://yourwebsite.com/thankyou.html">
+
+    <button type="submit">Send Message</button>
+
+</form>
+</section>
+
+<footer>
+
+    <p>© 2026 Goutham Netha</p>
+
+    <div class="social-icons">
+
+        <a href="https://instagram.com/gouthamnetha18" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+    </div>
+
+</footer>
+
+ <!-- JavaScript Here -->
+    <script>
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.onclick = () => {
+        navLinks.classList.toggle('active');
+    };
+
+    </script>
+
+</body>
+</html>
