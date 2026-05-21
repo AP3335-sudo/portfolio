@@ -7,9 +7,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-html{
-    scroll-behavior: smooth;
-}
+
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -82,38 +80,9 @@ header ul li{
 header ul li:hover{
     color: #ff5a1f;
 }
-.menu-toggle{
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
 
-@media(max-width:768px){
 
-    .menu-toggle{
-        display: block;
-    }
 
-    header{
-        position: relative;
-    }
-
-    header ul{
-        position: absolute;
-        top: 90px;
-        right: 20px;
-        background: #111;
-        width: 220px;
-        flex-direction: column;
-        padding: 20px;
-        border-radius: 15px;
-        display: none;
-    }
-
-    header ul.active{
-        display: flex;
-    }
-}
 
 /* Hero Section */
 
@@ -370,62 +339,101 @@ header ul li:hover{
     width: 65%;
 }
 
-.projects-section{
-    width: 85%;
-    margin: auto;
+/* =========================
+   HORIZONTAL PROJECT SCROLL
+========================= */
+
+.projects-scroll-section{
+    width: 100%;
     padding: 80px 0;
+    overflow: hidden;
 }
 
-.projects-section h2{
+.projects-scroll-section h2{
     text-align: center;
     font-size: 50px;
-    margin-bottom: 60px;
-}
-.projects-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 30px;
+    margin-bottom: 50px;
+    color: white;
 }
 
+.projects-scroll-wrapper{
+    overflow: hidden;
+    width: 100%;
+}
+
+.projects-scroll-track{
+    padding: 20px 0;
+    display: flex;
+    gap: 30px;
+    width: max-content;
+
+    animation: projectScroll 20s linear infinite;
+}
+
+/* Project Cards */
+
 .project-card{
+    min-width: 320px;
+    max-width: 320px;
+
     background: #0f0f0f;
-    padding: 40px 30px;
+
+    padding: 35px 30px;
+
     border-radius: 25px;
+
     border: 1px solid rgba(255,255,255,0.08);
+
     transition: 0.4s ease;
 }
 
 .project-card:hover{
     transform: translateY(-10px);
+
     border-color: #ff5a1f;
-    box-shadow: 0 0 25px rgba(255,90,31,0.15);
+
+    box-shadow: 0 0 25px rgba(255,90,31,0.2);
 }
 
 .project-card h3{
-    margin-bottom: 15px;
     color: #ff5a1f;
-    font-size: 28px;
+    margin-bottom: 15px;
+    font-size: 26px;
 }
 
 .project-card p{
     color: #d1d5db;
-    margin-bottom: 20px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
-.project-card a{
-    text-decoration: none;
-    color: white;
-    background: #ff5a1f;
-    padding: 12px 24px;
-    border-radius: 10px;
-    display: inline-block;
-    transition: 0.3s;
+/* Animation */
+
+@keyframes projectScroll{
+
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+
 }
 
-.project-card a:hover{
-    background: #ff7b47;
+/* Mobile */
+
+@media(max-width:768px){
+
+    .projects-scroll-section h2{
+        font-size: 36px;
+    }
+
+    .project-card{
+        min-width: 260px;
+    }
+
 }
+
 
 /* Contact Section */
 
@@ -538,12 +546,7 @@ hr{
 
 @media(max-width: 900px){
 
-    header{
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
+   
     header ul{
         flex-wrap: wrap;
         justify-content: center;
@@ -640,9 +643,6 @@ header{
 
 }
 
-body{
-    overflow-x: hidden;
-}
 
 
 /* =========================
@@ -654,12 +654,13 @@ body{
     /* Header */
 
     header{
-        width: 95%;
-        padding: 20px;
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
+    width: 95%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
     header h1{
         font-size: 22px;
@@ -751,21 +752,6 @@ body{
         font-size: 15px;
     }
 
-    /* Projects */
-
-    .projects-section{
-        width: 95%;
-        padding: 60px 20px;
-    }
-
-    .projects-section h2{
-        font-size: 34px;
-    }
-
-    .projects-container{
-        grid-template-columns: 1fr;
-    }
-
     /* Contact */
 
     #contact{
@@ -823,7 +809,7 @@ body{
     }
 
     .skills-section h2,
-    .projects-section h2,
+    .projects-scroll-section h2,
     #about h3,
     #contact h2{
         font-size: 28px;
